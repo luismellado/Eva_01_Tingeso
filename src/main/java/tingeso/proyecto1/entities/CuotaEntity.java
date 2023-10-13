@@ -8,22 +8,19 @@ import lombok.NoArgsConstructor;
 import java.sql.Date;
 
 @Entity
-@Table(name="estudiantes")
+@Table(name="cuotas")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class EstudianteEntity {
+public class CuotaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
 
+    private Integer id_cuotas;
+    private Integer valor_cuota;
+    private Date fecha_pago;
+    private String estado_cuota;
     private Integer id_estudiantes;
-    private String rut;
-    private String apellidos;
-    private String nombres;
-    private Date fecha_nacimiento;
-    private String tipo_colegio_procedencia;
-    private String nombre_colegio;
-    private Integer anyo_egreso;
 }
